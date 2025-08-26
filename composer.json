@@ -1,0 +1,16 @@
+{
+    "name": "dv/email-templates",
+    "type": "library",
+    "license": "MIT",
+    "authors": [],
+    "require": {
+        "php": ">=7.4"
+    },
+    "scripts": {},
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
