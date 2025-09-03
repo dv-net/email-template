@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [0.1.3]
+
+- Composer package name according with other packages [DV-3272]
 
 ## [0.1.2] 2025-08-11
 - Added receipt email template [DV-2569]
