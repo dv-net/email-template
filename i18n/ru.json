@@ -29,6 +29,7 @@
   "external_wallet_requested_email_title": "Запрос кошельков",
   "external_wallet_requested_email_subject": "Запрос внешних кошельков",
   "external_wallet_requested_message_text": "Вот список ваших активных кошельков на платформе DV.net",
+  "external_wallet_other_wallet": "Ваши остальные кошельки:",
   "invite_user_email_title": "Приглашение на роль",
   "invite_user_email_subject": "Приглашение на роль в сервисе",
   "invite_user_message_text": "Вас пригласили на роль {{InviteUserRole}} в нашем сервисе. Чтобы принять приглашение, нажмите на ссылку",

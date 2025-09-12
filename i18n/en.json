@@ -29,6 +29,7 @@
   "external_wallet_requested_email_title": "Wallet request",
   "external_wallet_requested_email_subject": "External wallet request",
   "external_wallet_requested_message_text": "Here is the list of your active wallets on the DV.net platform",
+  "external_wallet_other_wallet": "Your other wallets:",
   "invite_user_email_title": "Role invitation",
   "invite_user_email_subject": "Invitation to role in the service",
   "invite_user_message_text": "You have been invited to the role {{InviteUserRole}} in our service. To accept the invitation, click the link",

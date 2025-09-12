@@ -29,6 +29,7 @@
   "external_wallet_requested_email_title": "Solicitud de billetera",
   "external_wallet_requested_email_subject": "Solicitud de billetera externa",
   "external_wallet_requested_message_text": "Aquí está la lista de tus billeteras activas en la plataforma DV.net",
+  "external_wallet_other_wallet": "Tus otras billeteras:",
   "invite_user_email_title": "Invitación de rol",
   "invite_user_email_subject": "Invitación a rol en el servicio",
   "invite_user_message_text": "Has sido invitado al rol {{InviteUserRole}} en nuestro servicio. Para aceptar la invitación, haz clic en el enlace",
