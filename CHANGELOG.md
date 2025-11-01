@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [0.1.5]
+
+- Localisations for drafts [DV-3713]
+
 ## [0.1.4]
 - Enhance wallet email templates with conditional styling and additional sections [DV-2636]
 
