@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+- Added externalWalletRequested email template [DV-4054]
+
 ## [0.1.6]
 
 - Remove unused domains [DV-3766]
