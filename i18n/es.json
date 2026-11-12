@@ -89,6 +89,7 @@
     "payment_type_label": "Tipo de pago",
     "payment_blockchain_label": "Moneda de la operación",
     "transaction_hash_label": "Hash de transacción",
+    "sender_wallet_label": "Billetera del remitente",
     "payment": {
       "amount_label": "Monto de pago",
       "network_label_prefix": "vía",
@@ -114,6 +115,40 @@
     "payment_type": {
       "deposit": "Depósito",
       "transfer": "Transferencia"
+    }
+  },
+  "deposit_aml_blocked": {
+    "email": {
+      "title": "Pago bloqueado por la verificación AML",
+      "subject": "Su pago fue bloqueado por la verificación AML"
+    },
+    "title_label": "Pago bloqueado",
+    "message_text": "Su pago fue recibido, pero no superó la verificación AML (prevención del blanqueo de capitales) y fue bloqueado. Los fondos no han sido acreditados.",
+    "refund_text": "Para solicitar un reembolso, contacte con la tienda donde realizó el pago e indique el ID de la transacción bloqueada y el hash de la transacción indicados arriba.",
+    "amount_label": "Monto de pago",
+    "network_label_prefix": "vía",
+    "network_label_postfix": "red",
+    "transaction_hash_label": "Hash de transacción",
+    "to_address_label": "Dirección de depósito",
+    "payment_date_label": "Fecha y hora del pago",
+    "blocked_id_label": "ID de la transacción bloqueada",
+    "risk_level_label": "Nivel de riesgo",
+    "risk_score_label": "Puntuación de riesgo",
+    "reasons_title": "Motivos del bloqueo",
+    "reasons": {
+      "total_risk_score": "Puntuación total de riesgo",
+      "sum_of_signals": "Suma de señales de riesgo",
+      "risk_level": "Nivel de riesgo",
+      "signal": "Señal de riesgo",
+      "unknown_signal": "Otro"
+    },
+    "risk_levels": {
+      "none": "Ninguno",
+      "low": "Bajo",
+      "medium": "Medio",
+      "high": "Alto",
+      "critical": "Crítico",
+      "undefined": "Indefinido"
     }
   }
 }

@@ -89,6 +89,7 @@
     "payment_type_label": "Payment type",
     "payment_blockchain_label": "Operation currency",
     "transaction_hash_label": "Transaction hash",
+    "sender_wallet_label": "Sender wallet",
     "payment": {
       "amount_label": "Payment amount",
       "network_label_prefix": "via",
@@ -114,6 +115,40 @@
     "payment_type": {
       "deposit": "Deposit",
       "transfer": "Transfer"
+    }
+  },
+  "deposit_aml_blocked": {
+    "email": {
+      "title": "Payment blocked by AML check",
+      "subject": "Your payment was blocked by AML check"
+    },
+    "title_label": "Payment blocked",
+    "message_text": "Your payment was received, but it did not pass the AML check and was blocked. The funds have not been credited.",
+    "refund_text": "To request a refund, contact the store where you made the payment and provide the blocked transaction ID and the transaction hash listed above.",
+    "amount_label": "Payment amount",
+    "network_label_prefix": "via",
+    "network_label_postfix": "network",
+    "transaction_hash_label": "Transaction hash",
+    "to_address_label": "Deposit address",
+    "payment_date_label": "Payment Date & Time",
+    "blocked_id_label": "Blocked transaction ID",
+    "risk_level_label": "Risk level",
+    "risk_score_label": "Risk score",
+    "reasons_title": "Blocking reasons",
+    "reasons": {
+      "total_risk_score": "Total risk score",
+      "sum_of_signals": "Sum of risk signals",
+      "risk_level": "Risk level",
+      "signal": "Risk signal",
+      "unknown_signal": "Other"
+    },
+    "risk_levels": {
+      "none": "None",
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
+      "critical": "Critical",
+      "undefined": "Undefined"
     }
   }
 }
