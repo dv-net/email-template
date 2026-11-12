@@ -89,6 +89,7 @@
     "payment_type_label": "Zahlungsart",
     "payment_blockchain_label": "Operationswährung",
     "transaction_hash_label": "Transaktions-Hash",
+    "sender_wallet_label": "Absender-Wallet",
     "payment": {
       "amount_label": "Zahlungsbetrag",
       "network_label_prefix": "über",
@@ -114,6 +115,40 @@
     "payment_type": {
       "deposit": "Einzahlung",
       "transfer": "Übertragung"
+    }
+  },
+  "deposit_aml_blocked": {
+    "email": {
+      "title": "Zahlung durch AML-Prüfung blockiert",
+      "subject": "Ihre Zahlung wurde durch die AML-Prüfung blockiert"
+    },
+    "title_label": "Zahlung blockiert",
+    "message_text": "Ihre Zahlung ist eingegangen, hat jedoch die AML-Prüfung (Geldwäschebekämpfung) nicht bestanden und wurde blockiert. Die Mittel wurden nicht gutgeschrieben.",
+    "refund_text": "Um eine Rückerstattung anzufordern, wenden Sie sich an den Shop, in dem Sie bezahlt haben, und geben Sie die oben angegebene ID der blockierten Transaktion sowie den Transaktions-Hash an.",
+    "amount_label": "Zahlungsbetrag",
+    "network_label_prefix": "über",
+    "network_label_postfix": "Netzwerk",
+    "transaction_hash_label": "Transaktions-Hash",
+    "to_address_label": "Einzahlungsadresse",
+    "payment_date_label": "Datum und Uhrzeit der Zahlung",
+    "blocked_id_label": "ID der blockierten Transaktion",
+    "risk_level_label": "Risikostufe",
+    "risk_score_label": "Risikobewertung",
+    "reasons_title": "Gründe für die Sperrung",
+    "reasons": {
+      "total_risk_score": "Gesamtrisikobewertung",
+      "sum_of_signals": "Summe der Risikosignale",
+      "risk_level": "Risikostufe",
+      "signal": "Risikosignal",
+      "unknown_signal": "Sonstiges"
+    },
+    "risk_levels": {
+      "none": "Keine",
+      "low": "Niedrig",
+      "medium": "Mittel",
+      "high": "Hoch",
+      "critical": "Kritisch",
+      "undefined": "Unbestimmt"
     }
   }
 }

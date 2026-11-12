@@ -89,6 +89,7 @@
     "payment_type_label": "Тип платежа",
     "payment_blockchain_label": "Валюта операции",
     "transaction_hash_label": "Хеш транзакции",
+    "sender_wallet_label": "Кошелёк отправителя",
     "payment": {
       "amount_label": "Сумма платежа",
       "network_label_prefix": "через",
@@ -114,6 +115,40 @@
     "payment_type": {
       "deposit": "Депозит",
       "transfer": "Перевод"
+    }
+  },
+  "deposit_aml_blocked": {
+    "email": {
+      "title": "Платёж заблокирован по результатам AML-проверки",
+      "subject": "Ваш платёж заблокирован по результатам AML-проверки"
+    },
+    "title_label": "Платёж заблокирован",
+    "message_text": "Ваш платёж получен, но не прошёл AML-проверку и был заблокирован. Средства не зачислены.",
+    "refund_text": "Чтобы запросить возврат, обратитесь в магазин, в котором совершали оплату, и сообщите ID заблокированной транзакции и хеш транзакции, указанные выше.",
+    "amount_label": "Сумма платежа",
+    "network_label_prefix": "через",
+    "network_label_postfix": "сеть",
+    "transaction_hash_label": "Хеш транзакции",
+    "to_address_label": "Адрес зачисления",
+    "payment_date_label": "Дата и время платежа",
+    "blocked_id_label": "ID заблокированной транзакции",
+    "risk_level_label": "Уровень риска",
+    "risk_score_label": "Оценка риска",
+    "reasons_title": "Причины блокировки",
+    "reasons": {
+      "total_risk_score": "Общая оценка риска",
+      "sum_of_signals": "Сумма сигналов риска",
+      "risk_level": "Уровень риска",
+      "signal": "Сигнал риска",
+      "unknown_signal": "Другое"
+    },
+    "risk_levels": {
+      "none": "Нет",
+      "low": "Низкий",
+      "medium": "Средний",
+      "high": "Высокий",
+      "critical": "Критический",
+      "undefined": "Не определён"
     }
   }
 }

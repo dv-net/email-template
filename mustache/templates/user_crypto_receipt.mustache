@@ -3,6 +3,35 @@
     <!--[if (gte mso 9)|(IE)]>
     <style>body { background-color: #dde0e1 !important; }</style>
   <![endif]-->
+    <style type="text/css">
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            .stack {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+                text-align: left !important;
+            }
+            .stack-label {
+                margin-bottom: 8px !important;
+                padding: 0 !important;
+            }
+            .stack-value {
+                padding-bottom: 24px !important;
+            }
+            .stack-value-last {
+                padding-bottom: 0 !important;
+                margin-bottom: 0 !important;
+            }
+            .stack-value-last table {
+                float: none !important;
+            }
+        }
+    </style>
     <center style="width: 100%; background-color: #f7f7f7; padding: 0">
         <div style="max-width: 600px; background-color: #f7f7f7">
             <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="
@@ -17,233 +46,92 @@
                 {{> header}}
                 <tr>
                     <td>
-                        <center>
-                            <table border="0" cellpadding="0" cellspacing="0" role="presentation"
-                                style="max-width: 600px; width: 100%">
-                                <tr>
-                                    <td
-                                        style="background-color: #ffffff; border-radius: 8px 8px 0 0; padding: 32px; margin: 16px 16px 0 16px; position: relative;">
-                                        <h1
-                                            style="color: #000; padding: 24px 0 0 0; margin: 0; font-family: 'Roboto', Arial, sans-serif; font-size: 28px; font-weight: 700; line-height: 36px;">
-                                            {{userCryptoReceipt.titleLabel}}
-                                        </h1>
-
-                                        <!-- Receipt Details -->
-                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"
-                                            style="width: 100%; margin: 24px 0;">
-                                            <tr>
-                                                <td style="padding: 12px 0; border-bottom: 1px solid #ececec;">
-                                                    <table border="0" cellpadding="0" cellspacing="0"
-                                                        role="presentation" style="width: 100%;">
-                                                        <tr>
-                                                            <td
-                                                                style="color: #87898f; font-family: 'Roboto', Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 20px;">
-                                                                {{userCryptoReceipt.paymentStatusLabel}}
-                                                            </td>
-                                                            <td
-                                                                style="color: #000; font-family: 'Roboto', Arial, sans-serif; font-size: 14px; font-weight: 500; line-height: 20px; text-align: right;">
-                                                                {{#isCompleted}}
-                                                                <span
-                                                                    style="display: inline-block; padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; color: white; background-color: #22C55E;">
-                                                                    {{paymentStatusText}}
-                                                                </span>
-                                                                {{/isCompleted}}
-                                                                {{#isPending}}
-                                                                <span
-                                                                    style="display: inline-block; padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; color: white; background-color: #F59E0B;">
-                                                                    {{paymentStatusText}}
-                                                                </span>
-                                                                {{/isPending}}
-                                                                {{#isFailed}}
-                                                                <span
-                                                                    style="display: inline-block; padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; color: white; background-color: #EF4444;">
-                                                                    {{paymentStatusText}}
-                                                                </span>
-                                                                {{/isFailed}}
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding: 12px 0; border-bottom: 1px solid #ececec;">
-                                                    <table border="0" cellpadding="0" cellspacing="0"
-                                                        role="presentation" style="width: 100%;">
-                                                        <tr>
-                                                            <td
-                                                                style="color: #87898f; font-family: 'Roboto', Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 20px;">
-                                                                {{userCryptoReceipt.paymentIdLabel}}
-                                                            </td>
-                                                            <td
-                                                                style="color: #000; font-family: 'Roboto', Arial, sans-serif; font-size: 14px; font-weight: 500; line-height: 20px; text-align: right;">
-                                                                {{receiptId}}
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding: 12px 0; border-bottom: 1px solid #ececec;">
-                                                    <table border="0" cellpadding="0" cellspacing="0"
-                                                        role="presentation" style="width: 100%;">
-                                                        <tr>
-                                                            <td
-                                                                style="color: #87898f; font-family: 'Roboto', Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 20px;">
-                                                                {{userCryptoReceipt.paymentDateLabel}}
-                                                            </td>
-                                                            <td
-                                                                style="color: #000; font-family: 'Roboto', Arial, sans-serif; font-size: 14px; font-weight: 500; line-height: 20px; text-align: right;">
-                                                                {{paymentDate}}
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding: 12px 0; border-bottom: 1px solid #ececec;">
-                                                    <table border="0" cellpadding="0" cellspacing="0"
-                                                        role="presentation" style="width: 100%;">
-                                                        <tr>
-                                                            <td
-                                                                style="color: #87898f; font-family: 'Roboto', Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 20px;">
-                                                                {{userCryptoReceipt.paymentTypeLabel}}
-                                                            </td>
-                                                            <td
-                                                                style="color: #000; font-family: 'Roboto', Arial, sans-serif; font-size: 14px; font-weight: 500; line-height: 20px; text-align: right;">
-                                                                {{paymentTypeText}}
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding: 12px 0; border-bottom: 1px solid #ececec;">
-                                                    <table border="0" cellpadding="0" cellspacing="0"
-                                                        role="presentation" style="width: 100%;">
-                                                        <tr>
-                                                            <td
-                                                                style="color: #87898f; font-family: 'Roboto', Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 20px;">
-                                                                {{userCryptoReceipt.paymentBlockchainLabel}}
-                                                            </td>
-                                                            <td
-                                                                style="color: #000; font-family: 'Roboto', Arial, sans-serif; font-size: 14px; font-weight: 500; line-height: 20px; text-align: right;">
-                                                                <img src="https://cdn.dv.net/img/{{blockchainCurrencyId}}.png" alt="{{tokenSymbol}}" 
-                                                                    style="width: 16px; height: 16px; vertical-align: middle; margin-right: 6px;" />
-                                                                {{tokenSymbol}} ({{blockchainName}})
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-
-                                        <!-- Amount Section -->
-                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"
-                                            style="width: 100%; background-color: #F8FAFC; border-radius: 12px; padding: 24px; margin: 24px 0; border: 1px solid #E2E8F0;">
-                                            <tr>
-                                                <td>
-                                                    <table border="0" cellpadding="0" cellspacing="0"
-                                                        role="presentation" style="width: 100%;">
-                                                        <tr>
-                                                            <td
-                                                                style="color: #475569; font-family: 'Roboto', Arial, sans-serif; font-size: 16px; font-weight: 600; line-height: 24px; padding-bottom: 16px; text-align: center;">
-                                                                {{userCryptoReceipt.payment.amountLabel}}
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td
-                                                                style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 8px; padding: 24px; text-align: center;">
-                                                                <img src="https://cdn.dv.net/img/{{blockchainCurrencyId}}.png" alt="{{tokenSymbol}}" 
-                                                                    style="width: 28px; height: 28px; vertical-align: middle; margin-bottom: 12px;" />
-                                                                <div
-                                                                    style="color: #1E293B; font-family: 'Roboto', Arial, sans-serif; font-size: 40px; font-weight: 700; line-height: 48px; margin-bottom: 8px;">
-                                                                    {{tokenAmount}} {{tokenSymbol}}
-                                                                </div>
-                                                                <div
-                                                                    style="color: #64748B; font-family: 'Roboto', Arial, sans-serif; font-size: 18px; font-weight: 500; line-height: 24px; margin-bottom: 16px;">
-                                                                    ≈ ${{usdAmount}}
-                                                                </div>
-                                                                <div
-                                                                    style="color: #64748B; font-family: 'Roboto', Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 16px; margin-bottom: 16px;">
-                                                                    {{userCryptoReceipt.payment.networkLabelPrefix}} {{blockchainName}} {{userCryptoReceipt.payment.networkLabelPostfix}} 
-                                                                </div>
-                                                                
-                                                                <!-- Exchange rate and fees breakdown -->
-                                                                <div style="border-top: 1px solid #E2E8F0; padding-top: 16px;">
-                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%;">
-                                                                        <tr>
-                                                                            <td style="color: #64748B; font-family: 'Roboto', Arial, sans-serif; font-size: 13px; font-weight: 400; line-height: 18px; text-align: left; padding: 4px 0;">
-                                                                                {{userCryptoReceipt.payment.exchange.exchangeRateLabel}}:
-                                                                            </td>
-                                                                            <td style="color: #1E293B; font-family: 'Roboto', Arial, sans-serif; font-size: 13px; font-weight: 500; line-height: 18px; text-align: right; padding: 4px 0;">
-                                                                                1 {{tokenSymbol}} = ${{exchangeRate}}
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td style="color: #64748B; font-family: 'Roboto', Arial, sans-serif; font-size: 13px; font-weight: 400; line-height: 18px; text-align: left; padding: 4px 0;">
-                                                                                {{userCryptoReceipt.payment.fees.network.networkFeeLabel}}:
-                                                                            </td>
-                                                                            <td style="color: #1E293B; font-family: 'Roboto', Arial, sans-serif; font-size: 13px; font-weight: 500; line-height: 18px; text-align: right; padding: 4px 0;">
-                                                                                {{#renderNetworkFreeTierFee}}
-                                                                                <span style="color: #28a745; font-weight: bold;">{{userCryptoReceipt.payment.fees.freeTierText}}</span>
-                                                                                {{/renderNetworkFreeTierFee}}
-                                                                                {{^renderNetworkFreeTierFee}}
-                                                                                {{networkFeeAmount}} {{networkFeeCurrency}} (${{networkFeeUsd}})
-                                                                                {{/renderNetworkFreeTierFee}}
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td style="color: #64748B; font-family: 'Roboto', Arial, sans-serif; font-size: 13px; font-weight: 400; line-height: 18px; text-align: left; padding: 4px 0;">
-                                                                                {{userCryptoReceipt.payment.fees.platform.platformFeeLabel}}:
-                                                                            </td>
-                                                                            <td style="color: #1E293B; font-family: 'Roboto', Arial, sans-serif; font-size: 13px; font-weight: 500; line-height: 18px; text-align: right; padding: 4px 0;">
-                                                                                {{#renderPlatformFreeTierFee}}
-                                                                                <span style="color: #22C55E; font-weight: 600;">{{userCryptoReceipt.payment.fees.freeTierText}}</span>
-                                                                                {{/renderPlatformFreeTierFee}}
-                                                                                {{^renderPlatformFreeTierFee}}
-                                                                                {{platformFeeAmount}} {{platformFeeCurrency}} (${{platformFeeUsd}})
-                                                                                {{/renderPlatformFreeTierFee}}
-                                                                            </td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-
-                                        <!-- Transaction hash section -->
-                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"
-											style="width: 100%; background-color: #F8FAFC; border-radius: 12px; padding: 24px; margin: 24px 0; border: 1px solid #E2E8F0;">
-											<tr>
-												<td>
-													<table border="0" cellpadding="0" cellspacing="0"
-														role="presentation" style="width: 100%;">
-														<tr>
-															<td
-																style="color: #475569; font-family: 'Roboto', Arial, sans-serif; font-size: 16px; font-weight: 600; line-height: 24px; padding-bottom: 12px;">
-																{{userCryptoReceipt.transactionHashLabel}}
-															</td>
-														</tr>
-														<tr>
-															<td
-																style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 8px; padding: 16px;">
-																<div
-																	style="color: #1E293B; font-family: 'Courier New', monospace; font-size: 12px; font-weight: 500; line-height: 20px; word-break: break-all; letter-spacing: 0.5px;">
-																	{{transactionHash}}
-																</div>
-															</td>
-														</tr>
-													</table>
-												</td>
-											</tr>
-										</table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </center>
+                        <table role="presentation" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="width:100%; max-width:632px; border-collapse:collapse; background-color:#ffffff; border-radius:16px;">
+                            <tr>
+                                <td align="center" style="padding:34px 4px 4px 4px;">
+                                    <!--[if mso]>
+                                    <table role="presentation" width="592" align="center" border="0" cellpadding="0" cellspacing="0"><tr><td>
+                                    <![endif]-->
+                                    <table class="email-container" role="presentation" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="width:100%; max-width:624px; border-collapse:collapse;">
+                                        <tr>
+                                            <td align="center" style="padding:0 0 24px 0; font-family:'Roboto', Arial, Helvetica, sans-serif; font-size:28px; line-height:36px; font-weight:500; color:#000000; mso-line-height-rule:exactly;">{{userCryptoReceipt.titleLabel}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="padding:0 0 16px 0;">
+                                                <img src="https://cdn.dv.net/img/currency/70/{{blockchainCurrencyId}}.png" width="70" height="70" alt="{{tokenSymbol}}" style="display:block; width:70px; height:70px; border:0; border-radius:8px; outline:none; text-decoration:none;" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="padding:0 0 4px 0; font-family:'Roboto', Arial, Helvetica, sans-serif; font-size:16px; line-height:24px; font-weight:500; color:#6b6d80; mso-line-height-rule:exactly;">{{userCryptoReceipt.payment.amountLabel}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="padding:0 0 16px 0; font-family:'Roboto', Arial, Helvetica, sans-serif; font-size:34px; line-height:34px; font-weight:500; color:#303345; mso-line-height-rule:exactly;">{{tokenAmount}} {{tokenSymbol}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="padding:0 0 44px 0;">
+                                                <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                                                    <tr>
+                                                        <td align="center" style="padding:0 6px 0 0; font-family:'Roboto', Arial, Helvetica, sans-serif; font-size:16px; line-height:20px; font-weight:500; color:#6b6d80; white-space:nowrap; mso-line-height-rule:exactly;">≈ ${{usdAmount}}</td>
+                                                        <td align="center" style="font-family:'Roboto', Arial, Helvetica, sans-serif; font-size:16px; line-height:20px; font-weight:500; color:#6b6d80; white-space:nowrap; mso-line-height-rule:exactly;">{{userCryptoReceipt.payment.networkLabelPrefix}} {{blockchainName}} {{userCryptoReceipt.payment.networkLabelPostfix}}</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td bgcolor="#f7f9fb" style="background-color:#f7f9fb; border-radius:16px; padding:34px 30px;">
+                                                <!-- Transaction hash -->
+                                                <table class="rows" role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                                                    <tr>
+                                                        <td class="stack stack-label" valign="middle" style="padding:0 62px 24px 0; font-family:'Roboto', Arial, Helvetica, sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#a4a5b1; white-space:nowrap; vertical-align:middle; mso-line-height-rule:exactly;">{{userCryptoReceipt.transactionHashLabel}}</td>
+                                                        <td class="stack stack-value" width="100%" valign="middle" align="right" style="width:100%; padding:0 0 24px 0; font-family:'Roboto', Arial, Helvetica, sans-serif; font-size:16px; line-height:20px; font-weight:500; color:#1968e5; text-align:right; vertical-align:middle; word-break:break-all; overflow-wrap:anywhere; mso-line-height-rule:exactly;">{{transactionHash}}</td>
+                                                    </tr>
+                                                </table>
+                                                {{#senderWallet}}
+                                                <!-- Sender wallet -->
+                                                <table class="rows" role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                                                    <tr>
+                                                        <td class="stack stack-label" valign="middle" style="padding:0 62px 24px 0; font-family:'Roboto', Arial, Helvetica, sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#a4a5b1; white-space:nowrap; vertical-align:middle; mso-line-height-rule:exactly;">{{userCryptoReceipt.senderWalletLabel}}</td>
+                                                        <td class="stack stack-value" width="100%" valign="middle" align="right" style="width:100%; padding:0 0 24px 0; font-family:'Roboto', Arial, Helvetica, sans-serif; font-size:16px; line-height:20px; font-weight:500; color:#303345; text-align:right; vertical-align:middle; word-break:break-all; overflow-wrap:anywhere; mso-line-height-rule:exactly;">{{senderWallet}}</td>
+                                                    </tr>
+                                                </table>
+                                                {{/senderWallet}}
+                                                <!-- Payment date -->
+                                                <table class="rows" role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                                                    <tr>
+                                                        <td class="stack stack-label" valign="middle" style="padding:0 62px 24px 0; font-family:'Roboto', Arial, Helvetica, sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#a4a5b1; white-space:nowrap; vertical-align:middle; mso-line-height-rule:exactly;">{{userCryptoReceipt.paymentDateLabel}}</td>
+                                                        <td class="stack stack-value" width="100%" valign="middle" align="right" style="width:100%; padding:0 0 24px 0; font-family:'Roboto', Arial, Helvetica, sans-serif; font-size:16px; line-height:20px; font-weight:500; color:#303345; text-align:right; vertical-align:middle; white-space:nowrap; mso-line-height-rule:exactly;">{{paymentDate}}</td>
+                                                    </tr>
+                                                </table>
+                                                <!-- Payment status -->
+                                                <table class="rows" role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                                                    <tr>
+                                                        <td class="stack stack-label" valign="middle" style="padding:0 62px 0 0; font-family:'Roboto', Arial, Helvetica, sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#a4a5b1; white-space:nowrap; vertical-align:middle; mso-line-height-rule:exactly;">{{userCryptoReceipt.paymentStatusLabel}}</td>
+                                                        <td class="stack stack-value stack-value-last" width="100%" valign="middle" align="right" style="width:100%; padding:0; text-align:right; vertical-align:middle;">
+                                                            <table role="presentation" align="right" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                                                                <tr>
+                                                                    {{#isCompleted}}
+                                                                    <td align="center" bgcolor="#5ec36a" style="background-color:#5ec36a; border-radius:100px; padding:4px 8px; font-family:'Roboto', Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; font-weight:500; color:#ffffff; white-space:nowrap; mso-line-height-rule:exactly;">{{paymentStatusText}}</td>
+                                                                    {{/isCompleted}}
+                                                                    {{#isPending}}
+                                                                    <td align="center" bgcolor="#f59e0b" style="background-color:#f59e0b; border-radius:100px; padding:4px 8px; font-family:'Roboto', Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; font-weight:500; color:#ffffff; white-space:nowrap; mso-line-height-rule:exactly;">{{paymentStatusText}}</td>
+                                                                    {{/isPending}}
+                                                                    {{#isFailed}}
+                                                                    <td align="center" bgcolor="#ef4444" style="background-color:#ef4444; border-radius:100px; padding:4px 8px; font-family:'Roboto', Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; font-weight:500; color:#ffffff; white-space:nowrap; mso-line-height-rule:exactly;">{{paymentStatusText}}</td>
+                                                                    {{/isFailed}}
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!--[if mso]>
+                                    </td></tr></table>
+                                    <![endif]-->
+                                </td>
+                            </tr>
+                        </table>
                     </td>
                 </tr>
                 {{> footer}}
